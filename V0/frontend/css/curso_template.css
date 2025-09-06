@@ -30,6 +30,9 @@ body {
     left: 0;
     top: 0;
     border-right: 2px solid var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 #botao_voltar {
@@ -37,10 +40,13 @@ body {
     border: none;
     color: var(--text-color);
     cursor: pointer;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     padding: 8px;
     border-radius: 6px;
     transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    width: fit-content;
 }
 
 #botao_voltar:hover {
@@ -54,32 +60,39 @@ body {
 }
 
 #progresso {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 #progresso p {
     margin: 0 0 8px 0;
     font-weight: bold;
     color: var(--primary-color);
+    font-size: 1.1vw;
+}
+
+#progresso-percentual {
+    color: var(--text-color);
+    font-weight: 600;
 }
 
 #barra-progresso {
     width: 100%;
     height: 12px;
-    background: var(--background-color);
+    background: var(--background-color-2);
     border-radius: 6px;
     overflow: hidden;
     position: relative;
+    box-shadow: 0 1px 4px rgba(233,20,88,0.10);
 }
 
-#barra-progresso::after {
+#barra-progresso[aria-valuenow]:after {
     content: '';
     display: block;
-    width: 0%;
     height: 100%;
     background: var(--primary-color);
-    transition: width 0.4s;
     border-radius: 6px;
+    transition: width 0.4s;
+    width: attr(aria-valuenow percentage, 0%);
 }
 
 #navegacao ul {
@@ -99,10 +112,12 @@ body {
     padding: 4px 0;
     display: block;
     transition: color 0.2s;
+    border-radius: 4px;
 }
 
 #navegacao a:hover {
     color: var(--primary-color);
+    background: rgba(233,20,88,0.08);
 }
 
 #navegacao ul ul {
@@ -110,158 +125,32 @@ body {
     margin-top: 6px;
 }
 
-main#conteudo {
-    margin-left: 20vw;
-    padding: 40px 32px;
-    background: var(--background-color);
-    min-height: 100vh;
-    box-sizing: border-box;
-    width: auto;
+#navegacao ul ul li a {
+    font-size: 0.98vw;
+    font-weight: 400;
+    padding-left: 8px;
 }
 
 section {
+    margin-left: 20vw;
     margin-bottom: 40px;
     background: rgba(53,53,53,0.3);
     border-radius: 10px;
-    padding: 24px;
+    padding: 32px 24px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    min-height: 120px;
 }
 
-h2 {
+h1#course-title {
     color: var(--primary-color);
     margin-top: 0;
+    font-size: 2vw;
+    font-weight: bold;
+    letter-spacing: 0.02vw;
 }
 
-h3 {
+#course-detail {
     color: var(--text-color);
-    margin-bottom: 10px;
-}
-
-article {
-    margin-bottom: 28px;
-}
-
-img, video {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-top: 12px;
-    box-shadow: 0 2px 8px rgba(233,20,88,0.08);
-}
-
-ol {
-    padding-left: 20px;
-}
-
-ol > li {
-    margin-bottom: 18px;
-}
-
-ul {
-    padding-left: 18px;
-}
-
-input[type="radio"] {
-    accent-color: var(--primary-color);
-    margin-right: 6px;
-}
-
-/* Estilização da última seção (perguntas) */
-main#conteudo > section:last-child {
-    background: #181818;
-    border-radius: 0.6vw;
-    box-shadow: 0 0.1vw 0.4vw rgba(233,20,88,0.10);
-    padding: 1.6vw 1.2vw;
-    margin-bottom: 2vw;
-}
-
-main#conteudo > section:last-child h2 {
-    color: var(--primary-color);
-    font-size: 1.6vw;
-    margin-bottom: 2vw;
-    font-weight: bold;
-}
-
-main#conteudo > section:last-child ol {
-    counter-reset: pergunta;
-    padding-left: 0;
-}
-
-main#conteudo > section:last-child ol > li {
-    margin-bottom: 2vw;
-    list-style: none;
-    position: relative;
-    padding-left: 3vw;
-}
-
-main#conteudo > section:last-child ol > li::before {
-    counter-increment: pergunta;
-    content: "Q" counter(pergunta);
-    position: absolute;
-    left: 0;
-    top: 0.2vw;
-    background: var(--primary-color);
-    color: #fff;
-    font-weight: bold;
-    border-radius: 0.3vw;
-    padding: 0.3vw 1vw;
-    font-size: 1vw;
-    letter-spacing: 0.05vw;
-}
-
-main#conteudo > section:last-child ol > li p {
-    margin: 2vw;
-    padding-top: 0.3vw;
     font-size: 1.1vw;
-    color: var(--text-color);
-    font-weight: 500;
-}
-
-main#conteudo > section:last-child ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1vw;
-    padding-left: 0;
-    margin: 0;
-}
-
-main#conteudo > section:last-child ul > li {
-    color: #fff;
-    border-radius: 0.3vw;
-    padding: 1vw 2vw;
-    margin: 0;
-    font-size: 1vw;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    flex: 1 1 45%;
-    min-width: 9vw;
-    cursor: pointer;
-    transition: background 0.2s;
-    position: relative;
-    box-sizing: border-box;
-    border: none;
-}
-
-main#conteudo > section:last-child ul > li input[type="radio"] {
-    accent-color: var(--primary-color);
-    margin-right: 0.7vw;
-    width: 1vw;
-    height: 1vw;
-    cursor: pointer;
-    position: relative;
-    z-index: 2;
-}
-
-main#conteudo > section:last-child ul > li:hover {
-    background: #c11248;
-}
-
-main#conteudo > section:last-child ul > li:has(input[type="radio"]:checked) {
-    background: #c11248;
-    box-shadow: 0 0 0 0.1vw #e91458;
-}
-
-main#conteudo > section:last-child ul > li input[type="radio"]:focus-visible {
-    outline: 0.1vw solid #fff;
-    outline-offset: 0.1vw;
+    margin-top: 18px;
 }
