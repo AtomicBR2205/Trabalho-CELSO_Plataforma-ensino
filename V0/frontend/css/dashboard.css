@@ -94,7 +94,6 @@ a{
     height: 1vw;
     vertical-align: middle;
     fill: var(--text-color);
-    margin-bottom: 0.2vw;
     flex-shrink: 0;
 }
 

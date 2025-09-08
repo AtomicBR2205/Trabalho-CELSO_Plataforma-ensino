@@ -1,4 +1,6 @@
-:root{
+/* config.css - Estilo para página de configurações, baseado em dashboard.css */
+
+:root {
     --primary-color: #e91458;
     --secondary-color: #353535;
     --background-color: #0a0a0a;
@@ -15,10 +17,11 @@ body {
     font-family: var(--font-family);
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
+
 #menu {
     height: 100%;
     position: fixed;
@@ -113,28 +116,7 @@ a{
     background-color: #232323;
 }
 
-#menu section {
-    margin-top: auto;
-    margin-bottom: 2vw;
-    text-align: left;
-    border-top: 1px solid var(--secondary-color);
-    padding: 1vw 0 0 0;
-}
 
-#menu section h6 {
-    margin: 0;
-    font-size: 1vw;
-    font-weight: bold;
-    color: var(--primary-color);
-    letter-spacing: 1px;
-}
-
-#menu section p {
-    margin: 0.3vw 0 0 0;
-    font-size: 0.8vw;
-    color: var(--text-color);
-    opacity: 0.7;
-}
 
 #menu button {
     width: 100%;
@@ -170,107 +152,67 @@ a{
     fill: #fff;
 }
 
-#content {
+main {
     margin-left: 22vw;
     padding: 3vw 4vw 3vw 3vw;
-    box-sizing: border-box;
     min-height: 100vh;
     background: var(--background-color-2);
     display: flex;
     flex-direction: column;
     gap: 2vw;
+    box-sizing: border-box;
 }
 
-#content h2 {
-    font-size: 2vw;
+main h1 {
+    font-size: 2.5vw;
     color: var(--primary-color);
-    margin: 0 0 0.5vw 0;
     font-weight: bold;
+    margin: 0 0 0.5vw 0;
     letter-spacing: 1px;
 }
 
-#content p {
-    font-size: 1vw;
+main > p {
+    font-size: 1.1vw;
     color: var(--text-color);
-    opacity: 0.85;
-    margin: 0.5vw 0 1vw 0;
-}
-
-#nav_cursos {
-    display: flex;
-    gap: 1vw;
+    opacity: 0.8;
     margin-bottom: 2vw;
 }
 
-#nav_cursos button {
-    background: #181818;
-    color: var(--text-color);
-    border: none;
-    border-radius: 6px;
-    padding: 0.7vw 2vw;
-    font-size: 1vw;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-}
-
-#nav_cursos button.active,
-#nav_cursos button:hover {
-    background: var(--primary-color);
-    color: #fff;
-}
-
-#courses-container.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18vw, 1fr));
-    gap: 2vw;
-    margin-top: 1vw;
-}
-
-.card {
+main section {
     background: #181818;
     border-radius: 10px;
-    padding: 2vw;
+    padding: 2vw 2vw 1vw 2vw;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 2vw;
+}
+
+main section h2 {
+    font-size: 1.5vw;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin: 0 0 1vw 0;
+}
+
+main section div {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    min-width: 18vw;
-    position: relative;
-    overflow: hidden;
-    transition: box-shadow 0.2s, transform 0.2s;
+    gap: 1vw;
 }
 
-.card:hover {
-    box-shadow: 0 4px 16px rgba(233,20,88,0.15);
-    transform: scale(1.02);
-}
-
-.card img {
-    display: block;
-    width: 100%;
-    height: 8vw;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-    margin-bottom: 1vw;
-}
-
-.card h3 {
-    font-size: 1.2vw;
+main section p {
+    font-size: 1vw;
     color: var(--text-color);
-    margin: 1vw 0 0.5vw 0;
+    opacity: 0.85;
+    margin: 0.2vw 0;
+}
+
+main section strong {
+    color: var(--primary-color);
     font-weight: bold;
-    letter-spacing: 1px;
 }
 
-.card p {
-    font-size: 0.9vw;
-    color: var(--text-color);
-    opacity: 0.8;
-    margin: 0.3vw 0 1vw 0;
-}
-
-.card a {
+button {
+    padding: 0.7vw 1.5vw;
     background: var(--primary-color);
     color: #fff;
     border: none;
@@ -278,21 +220,62 @@ a{
     font-size: 1vw;
     cursor: pointer;
     font-weight: bold;
-    padding: 0.7vw 1.5vw;
-    text-decoration: none;
-    transition: background 0.2s;
-    margin-top: auto;
-    display: inline-block;
-}
-
-.card a:hover {
-    background: #c11248;
-}
-
-button {
-    transition: transform 0.4s;
+    margin-right: 1vw;
+    margin-top: 0.5vw;
+    transition: background 0.2s, transform 0.4s;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
 button:hover {
-    transform: scale(1.02);
+    background: #c11248;
+    transform: scale(1.03);
+}
+
+label {
+    font-size: 1vw;
+    color: var(--text-color);
+    opacity: 0.85;
+    display: flex;
+    align-items: center;
+    gap: 0.7vw;
+    margin-bottom: 0.5vw;
+    cursor: pointer;
+}
+
+/* Custom Checkbox */
+input[type="checkbox"] {
+    appearance: none;
+    width: 1.2vw;
+    height: 1.2vw;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    background: #232323;
+    margin-right: 0.7vw;
+    position: relative;
+    cursor: pointer;
+    transition: border 0.2s, box-shadow 0.2s;
+    vertical-align: middle;
+}
+
+input[type="checkbox"]:checked {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+input[type="checkbox"]:checked::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0.35vw;
+    top: 0.15vw;
+    width: 0.4vw;
+    height: 0.7vw;
+    border: solid #fff;
+    border-width: 0 0.2vw 0.2vw 0;
+    transform: rotate(45deg);
+}
+
+input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #e9145877;
 }
