@@ -42,4 +42,4 @@ Estilização: Tailwind CSS ou Styled Components
 - Celso Jacubavicius
 ##
 ## 🔗 Deploy (GitHub Pages): [coloque o link aqui]
-![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWMxbnNzd25oNWp0NDB2dnVnc3hhdTNnajh4Y2p4MGhqbDkza3c2cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L1R1tvI9svkIWwpVYr/giphy.gif)
+![](https://media1.tenor.com/m/Ppv8mFaNb2sAAAAd/weak-hero-class-weakheroclass.gif)
