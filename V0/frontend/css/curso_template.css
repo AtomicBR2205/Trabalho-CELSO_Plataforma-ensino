@@ -1,0 +1,156 @@
+:root{
+    --primary-color: #e91458;
+    --secondary-color: #353535;
+    --background-color: #0a0a0a;
+    --background-color-2: #000000;
+    --text-color: #f8f8f8;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color-2);
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+#sidebar {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    width: 20vw;
+    min-height: 100vh;
+    padding: 32px 20px;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-right: 2px solid var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+#botao_voltar {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    margin-bottom: 16px;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+#botao_voltar:hover {
+    background-color: var(--secondary-color);
+}
+
+#botao_voltar svg {
+    vertical-align: middle;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#progresso {
+    margin-bottom: 24px;
+}
+
+#progresso p {
+    margin: 0 0 8px 0;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.1vw;
+}
+
+#progresso-percentual {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+#barra-progresso {
+    width: 100%;
+    height: 12px;
+    background: var(--background-color-2);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 1px 4px rgba(233,20,88,0.10);
+}
+
+#barra-progresso[aria-valuenow]:after {
+    content: '';
+    display: block;
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 6px;
+    transition: width 0.4s;
+    width: attr(aria-valuenow percentage, 0%);
+}
+
+#navegacao ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navegacao > ul > li {
+    margin-bottom: 18px;
+}
+
+#navegacao a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 4px 0;
+    display: block;
+    transition: color 0.2s;
+    border-radius: 4px;
+}
+
+#navegacao a:hover {
+    color: var(--primary-color);
+    background: rgba(233,20,88,0.08);
+}
+
+#navegacao ul ul {
+    margin-left: 16px;
+    margin-top: 6px;
+}
+
+#navegacao ul ul li a {
+    font-size: 0.98vw;
+    font-weight: 400;
+    padding-left: 8px;
+}
+
+section {
+    margin-left: 20vw;
+    margin-bottom: 40px;
+    background: rgba(53,53,53,0.3);
+    border-radius: 10px;
+    padding: 32px 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    min-height: 120px;
+}
+
+h1#course-title {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-size: 2vw;
+    font-weight: bold;
+    letter-spacing: 0.02vw;
+}
+
+#course-detail {
+    color: var(--text-color);
+    font-size: 1.1vw;
+    margin-top: 18px;
+}

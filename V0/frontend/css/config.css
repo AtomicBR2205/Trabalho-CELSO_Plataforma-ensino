@@ -1,0 +1,281 @@
+/* config.css - Estilo para página de configurações, baseado em dashboard.css */
+
+:root {
+    --primary-color: #e91458;
+    --secondary-color: #353535;
+    --background-color: #0a0a0a;
+    --background-color-2: #000000;
+    --text-color: #f8f8f8;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color-2);
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu {
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--secondary-color);
+    width: 20vw;
+    padding: 2vw;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    z-index: 10;
+}
+
+#menu > div {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    margin-bottom: 2vw;
+    padding: 0vw 1vw;
+}
+
+#menu > div svg {
+    width: 2vw;
+    height: 2vw;
+    object-fit: contain;
+    display: block;
+    color: var(--primary-color);
+}
+
+#menu > div h1 {
+    font-size: 2vw;
+    color: var(--text-color);
+    margin: 0;
+    flex: 1;
+    text-align: left;
+    font-weight: bold;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2vw 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+}
+
+#menu ul a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+#menu ul li {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    padding: 1vw;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    cursor: pointer;
+    font-size: 1vw;
+    transition: background 0.2s;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+#menu ul li svg {
+    width: 1vw;
+    height: 1vw;
+    vertical-align: middle;
+    fill: var(--text-color);
+    flex-shrink: 0;
+}
+
+#menu ul li.active {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+#menu ul li.active svg {
+    fill: #fff;
+}
+
+#menu ul li.active:hover {
+    background-color: #c11248;
+}
+
+#menu ul li:hover {
+    background-color: #232323;
+}
+
+
+
+#menu button {
+    width: 100%;
+    padding: 1vw;
+    color: var(--text-color);
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s;
+    background: var(--background-color);
+    border-radius: 4px;
+    font-size: 1vw;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#menu button svg {
+    width: 1vw;
+    height: 1vw;
+    fill: var(--text-color);
+    margin-bottom: 0.2vw;
+    flex-shrink: 0;
+}
+
+#menu button:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+#menu button:hover svg {
+    fill: #fff;
+}
+
+main {
+    margin-left: 22vw;
+    padding: 3vw 4vw 3vw 3vw;
+    min-height: 100vh;
+    background: var(--background-color-2);
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    box-sizing: border-box;
+}
+
+main h1 {
+    font-size: 2.5vw;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin: 0 0 0.5vw 0;
+    letter-spacing: 1px;
+}
+
+main > p {
+    font-size: 1.1vw;
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: 2vw;
+}
+
+main section {
+    background: #181818;
+    border-radius: 10px;
+    padding: 2vw 2vw 1vw 2vw;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 2vw;
+}
+
+main section h2 {
+    font-size: 1.5vw;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin: 0 0 1vw 0;
+}
+
+main section div {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+main section p {
+    font-size: 1vw;
+    color: var(--text-color);
+    opacity: 0.85;
+    margin: 0.2vw 0;
+}
+
+main section strong {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+button {
+    padding: 0.7vw 1.5vw;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1vw;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 1vw;
+    margin-top: 0.5vw;
+    transition: background 0.2s, transform 0.4s;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+button:hover {
+    background: #c11248;
+    transform: scale(1.03);
+}
+
+label {
+    font-size: 1vw;
+    color: var(--text-color);
+    opacity: 0.85;
+    display: flex;
+    align-items: center;
+    gap: 0.7vw;
+    margin-bottom: 0.5vw;
+    cursor: pointer;
+}
+
+/* Custom Checkbox */
+input[type="checkbox"] {
+    appearance: none;
+    width: 1.2vw;
+    height: 1.2vw;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    background: #232323;
+    margin-right: 0.7vw;
+    position: relative;
+    cursor: pointer;
+    transition: border 0.2s, box-shadow 0.2s;
+    vertical-align: middle;
+}
+
+input[type="checkbox"]:checked {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+input[type="checkbox"]:checked::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0.35vw;
+    top: 0.15vw;
+    width: 0.4vw;
+    height: 0.7vw;
+    border: solid #fff;
+    border-width: 0 0.2vw 0.2vw 0;
+    transform: rotate(45deg);
+}
+
+input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #e9145877;
+}

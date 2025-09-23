@@ -1,0 +1,157 @@
+:root{
+    --primary-color: #e91458;
+    --secondary-color: #353535;
+    --background-color: #0a0a0a;
+    --background-color-2: #000000;
+    --text-color: #f8f8f8;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color-2);
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    margin: 4vw auto 2vw auto;
+    padding: 0 2vw;
+    width: fit-content;
+}
+
+#logo svg {
+    width: 3vw;
+    height: 3vw;
+    color: var(--primary-color);
+    display: block;
+}
+
+#logo h1 {
+    font-size: 2.5vw;
+    color: var(--text-color);
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+#main-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 70vh;
+    padding: 2vw;
+}
+
+#perfis {
+    background: #181818;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    padding: 3vw 4vw;
+    min-width: 28vw;
+    max-width: 38vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#perfis h1 {
+    font-size: 2vw;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 1vw;
+    text-align: center;
+}
+
+#descricao-form {
+    font-size: 1vw;
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: 2vw;
+    text-align: center;
+}
+
+.perfil-cards {
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+    margin-bottom: 2vw;
+    width: 100%;
+}
+
+.perfil-card {
+    background: #232323;
+    border-radius: 10px;
+    padding: 2vw 1vw 1vw 1vw;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 12vw;
+    max-width: 16vw;
+    position: relative;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.perfil-card:hover {
+    background: #282828;
+    box-shadow: 0 2px 12px rgba(233,20,88,0.08);
+    transform: scale(1.04);
+}
+
+.perfil-card img {
+    width: 6vw;
+    height: 6vw;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1vw;
+    background: #353535;
+    border: 2px solid var(--primary-color);
+}
+
+.perfil-card h2 {
+    font-size: 1.3vw;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin: 0.5vw 0 0.5vw 0;
+    text-align: center;
+}
+
+.perfil-card p {
+    font-size: 0.95vw;
+    color: var(--text-color);
+    opacity: 0.8;
+    margin: 0 0 1vw 0;
+    text-align: center;
+}
+
+.perfil-btn {
+    display: inline-block;
+    padding: 0.7vw 2vw;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 6px;
+    font-size: 1vw;
+    font-weight: bold;
+    margin-top: 1vw;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.perfil-card:hover .perfil-btn {
+    background: #c11248;
+    transform: scale(1.08);
+}
