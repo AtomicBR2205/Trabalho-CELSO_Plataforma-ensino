@@ -1,3 +1,4 @@
+//dados dos cursos em JSON
 const courses = [
   {
     id: 1,

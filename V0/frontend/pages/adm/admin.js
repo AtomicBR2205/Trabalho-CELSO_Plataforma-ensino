@@ -1,5 +1,6 @@
 const ADMIN_PASSWORD = "admin123"; // 🔑 senha fixa
 
+
 function getStoredCourses() {
   return JSON.parse(localStorage.getItem("customCourses")) || [];
 }
