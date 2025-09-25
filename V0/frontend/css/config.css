@@ -279,3 +279,88 @@ input[type="checkbox"]:focus {
     outline: none;
     box-shadow: 0 0 0 2px #e9145877;
 }
+
+#delete-account-btn {
+    background-color: #9e2a2b; /* Vermelho escuro para perigo */
+    color: white;
+}
+#delete-account-btn:hover {
+    background-color: #7b2122;
+}
+
+
+/* --- Estilos para os Modais (Pop-ups) --- */
+dialog {
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #2a2a2a; /* Cor de fundo escura para o modal */
+    color: white;
+    padding: 25px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+}
+
+/* Fundo escurecido que aparece atrás do modal */
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+}
+
+dialog h3 {
+    margin-top: 0;
+    color: var(--primary-color, #e91458); /* Usa a cor primária do seu site */
+}
+
+/* Estilos para os formulários dentro dos modais */
+dialog .input-group {
+    margin-bottom: 15px;
+}
+
+dialog label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+dialog input {
+    width: 100%;
+    padding: 10px;
+    background-color: #353535;
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: white;
+    box-sizing: border-box;
+}
+
+/* Container para os botões de ação do modal */
+dialog .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+/* --- Estilos para Mensagens de Feedback --- */
+#config-message-container {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.message-success {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+}
+
+.message-error {
+    background-color: rgba(244, 67, 54, 0.2);
+    color: #f44336;
+}
+
+/* Classe de utilidade para esconder/mostrar elementos */
+.hidden {
+    display: none;
+}

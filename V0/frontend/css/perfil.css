@@ -294,3 +294,114 @@ button {
 button:hover {
     transform: scale(1.02);
 }
+
+/* Estilos para os inputs e botões na página de perfil */
+#edit-profile-form .input-group {
+    margin-bottom: 15px;
+}
+
+#edit-profile-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+#edit-profile-form input,
+#edit-profile-form textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--secondary-color, #353535);
+    border: 1px solid #555;
+    border-radius: 6px;
+    color: var(--text-color, #f8f8f8);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+#edit-profile-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+#edit-profile-form .form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#edit-profile-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#edit-profile-form button[type="submit"] {
+    background-color: var(--primary-color, #e91458);
+    color: white;
+}
+#edit-profile-form button[type="submit"]:hover {
+    background-color: #c11248;
+}
+
+#edit-profile-form button[type="button"] {
+    background-color: #555;
+    color: white;
+}
+#edit-profile-form button[type="button"]:hover {
+    background-color: #777;
+}
+
+/* --- NOVOS ESTILOS PARA FOTO DE PERFIL --- */
+.photo-management {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.photo-preview {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #444;
+}
+
+.photo-actions {
+    display: flex;
+    gap: 10px;
+}
+
+#edit-photo-input {
+    display: none; /* O input de arquivo fica escondido */
+}
+
+#delete-photo-btn {
+    background-color: #9e2a2b !important; /* Cor vermelha para exclusão */
+}
+#delete-photo-btn:hover {
+    background-color: #7b2122 !important;
+}
+/* --- FIM DOS NOVOS ESTILOS --- */
+
+
+/* Classe para esconder elementos */
+.hidden {
+    display: none;
+}
+
+/* Mensagem de sucesso */
+#success-message {
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+    border-radius: 5px;
+    text-align: center;
+}

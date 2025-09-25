@@ -1,0 +1,135 @@
+:root {
+    --primary-color: #e91458;
+    --secondary-color: #353535;
+    --background-color: #0a0a0a;
+    --background-color-2: #000000;
+    --text-color: #f8f8f8;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color-2);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#auth-container {
+    width: 100%;
+    padding: 20px;
+}
+
+#form-container {
+    background: #181818;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 3vw 4vw;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--secondary-color);
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: var(--text-color);
+    font-size: 1rem;
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(233, 20, 88, 0.3);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #c11248;
+    transform: scale(1.02);
+}
+
+.switch-form {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.switch-form span {
+    color: var(--primary-color);
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.switch-form span:hover {
+    text-decoration: underline;
+}
+
+/* Classe para esconder formulários */
+.hidden {
+    display: none;
+}
+
+/* Estilos para as mensagens de feedback */
+#message-container {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Começa escondido */
+}
+
+.message-success {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+    display: block;
+}
+
+.message-error {
+    background-color: rgba(244, 67, 54, 0.2);
+    color: #f44336;
+    display: block;
+}

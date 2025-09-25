@@ -1,56 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Curso</title>
-  <link rel="stylesheet" href="./../css/curso_template.css">
-  <script src="courses.js" defer></script>
-  <script src="course.js" defer></script>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso</title>
+    <link rel="stylesheet" href="../css/curso_template.css"> </head>
 <body>
-<main>
-  <aside id="sidebar">
-    <a href="./cursos.html" id="botao_voltar" aria-label="Voltar para cursos">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146
-          a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
-      </svg>
-    </a>
+    <main class="course-layout">
+        <aside id="sidebar">
+            <a href="cursos.html" id="botao_voltar" aria-label="Voltar para cursos">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                </svg>
+                <span>Voltar</span>
+            </a>
+            <h2 id="sidebar-title">Conteúdo do Curso</h2>
+            <nav id="navegacao"></nav>
+        </aside>
 
-    <div id="progresso">
-      <p>Progresso: <span id="progresso-percentual">0%</span></p>
-      <div id="barra-progresso" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
-    </div>
+        <section id="course-content-area">
+            <h1 id="course-title">Carregando...</h1>
+            <p id="course-description"></p>
+            <div id="course-main-content"></div>
+        </section>
+    </main>
 
-    <nav id="navegacao">
-      <ul>
-        <li>
-          <a href="#capitulo1">Capítulo 1 - Introdução</a>
-          <ul>
-            <li><a href="#capitulo1-1">1.1 O que é</a></li>
-            <li><a href="#capitulo1-2">1.2 Importância</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#capitulo2">Capítulo 2 - Conteúdo Principal</a>
-          <ul>
-            <li><a href="#capitulo2-1">2.1 Conceitos</a></li>
-            <li><a href="#capitulo2-2">2.2 Exemplos</a></li>
-            <li><a href="#capitulo2-3">2.3 Vídeos Explicativos</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#capitulo3">Capítulo 3 - Questões</a>
-        </li>
-      </ul>
-    </nav>
-  </aside>
-
-  <section>
-    <h1 id="course-title">Carregando...</h1>
-    <div id="course-detail"></div>
-  </section>
-</main>
-
+    <script src="course.js" defer></script>
 </body>
 </html>

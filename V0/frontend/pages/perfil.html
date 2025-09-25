@@ -45,54 +45,75 @@
             </li></a>
         </ul>
         <section>
-            <h6>João Silva</h6>
+            <h6 id="user-name-menu">Carregando...</h6>
             <p>Estudante</p>
         </section>
-        <a href="../../index.html"><button>
+        <button id="logout-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
                 <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
             </svg>
-                Sair
-        </button></a>
+            Sair
+        </button>
     </div>
 
     <main>
         <h1>Meu Perfil</h1>
-        <p>Gerencie suas informações pessoais e acompanhe seu progresso</p>
+        <p>Gerencie suas informações pessoais!</p>
 
-        <!-- Informações Pessoais -->
         <section>
             <h2>Informações Pessoais</h2>
-            <p>Suas informações básicas e dados de contato</p>
-            <div>
-                <img src="foto-perfil.png" alt="Foto de perfil" width="100">
-                <p><strong>Nome Completo:</strong> João Silva</p>
-                <p><strong>Email:</strong> joao.silva@email.com</p>
-                <p><strong>Telefone:</strong> +55 11 99999-9999</p>
-                <p><strong>Localização:</strong> São Paulo, SP</p>
-                <p><strong>Biografia:</strong> Desenvolvedor apaixonado por tecnologia e sempre em busca de novos conhecimentos. Atualmente focado em desenvolvimento web e ciência de dados.</p>
-                <p><em>Membro(a) desde 14/01/2024</em></p>
+            <div id="success-message" class="hidden"></div>
+            
+            <div id="view-profile">
+                <p>Suas informações básicas e dados de contato</p>
+                <div>
+                    <img src="" alt="Foto de perfil" width="100" id="profile-pic-view" class="photo-preview">
+                    <p><strong>Nome Completo:</strong> <span id="view-name"></span></p>
+                    <p><strong>Email:</strong> <span id="view-email"></span></p>
+                    <p><strong>Telefone:</strong> <span id="view-phone"></span></p>
+                    <p><strong>Localização:</strong> <span id="view-location"></span></p>
+                    <p><strong>Biografia:</strong> <span id="view-bio"></span></p>
+                    <p><em>Membro(a) desde 25/09/2025</em></p>
+                </div>
+                <button id="edit-profile-btn">Editar Perfil</button>
             </div>
-        </section>
 
-        <!-- Estatísticas -->
-        <section>
-            <h2>Estatísticas</h2>
-            <p><strong>2450</strong> Pontos Totais</p>
-            <ul>
-                <li>Cursos Concluídos: 12</li>
-                <li>Em Progresso: 3</li>
-                <li>Horas Estudadas: 156h</li>
-            </ul>
-            </section>
+            <form id="edit-profile-form" class="hidden">
+                <div class="photo-management">
+                    <img src="" alt="Preview da foto de perfil" id="profile-pic-edit" class="photo-preview">
+                    <input type="file" id="edit-photo-input" accept="image/*">
+                    <div class="photo-actions">
+                        <button type="button" id="change-photo-btn">Alterar Foto</button>
+                        <button type="button" id="delete-photo-btn">Excluir Foto</button>
+                    </div>
+                </div>
 
-            <!-- Sequência Atual -->
-            <section>
-            <h2>Sequência Atual</h2>
-            <p>15 dias consecutivos</p>
-            <p>Continue estudando para manter sua sequência!</p>
+                <div class="input-group">
+                    <label for="edit-name">Nome Completo</label>
+                    <input type="text" id="edit-name" required>
+                </div>
+                <div class="input-group">
+                    <label for="edit-phone">Telefone</label>
+                    <input type="tel" id="edit-phone" placeholder="(11) 99999-9999">
+                </div>
+                <div class="input-group">
+                    <label for="edit-location">Localização</label>
+                    <input type="text" id="edit-location" placeholder="São Paulo, SP">
+                </div>
+                <div class="input-group">
+                    <label for="edit-bio">Biografia</label>
+                    <textarea id="edit-bio" placeholder="Fale um pouco sobre você..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit">Salvar Alterações</button>
+                    <button type="button" id="cancel-edit-btn">Cancelar</button>
+                </div>
+            </form>
         </section>
-    </main>
+        
+        </main>
+    
+    <script src="perfil.js"></script>
 </body>
 </html>

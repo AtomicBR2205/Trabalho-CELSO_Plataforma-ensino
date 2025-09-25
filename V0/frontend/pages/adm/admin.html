@@ -1,60 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin - Gerenciar Cursos</title>
-  <link rel="stylesheet" href="../../css/admin.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Gerenciar Cursos</title>
+    <link rel="stylesheet" href="../../css/admin.css">
 </head>
 <body>
-  <header>
-    <h1>Painel Administrativo</h1>
-    <nav>
-      <a href="../../../index.html">Início</a>
-      <a href="admin.html">Admin</a>
-    </nav>
-  </header>
+    <header>
+        <h1>Painel Administrativo</h1>
+        <nav><a href="../../../index.html" id="logout-btn">Sair</a></nav>
+    </header>
 
-  <main>
-    <!-- Tela de login -->
-    <section id="login-section">
-      <h2>Login de Administrador</h2>
-      <form id="login-form">
-        <label for="password">Senha:</label>
-        <input type="password" id="password" required>
-        <button type="submit">Entrar</button>
-      </form>
-      <p id="login-error" class="error"></p>
-    </section>
+    <main>
+        <section id="login-section">
+            <h2>Login de Administrador</h2>
+            <form id="login-form">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" required>
+                <button type="submit" id="login-btn">Entrar</button>
+            </form>
+            <p id="login-error" class="error"></p>
+        </section>
 
-    <!-- Painel de administração -->
-    <section id="admin-panel" style="display: none;">
-      <h2>Adicionar Novo Curso</h2>
-      <form id="course-form">
-        <label for="title">Título:</label>
-        <input type="text" id="title" required>
+        <section id="admin-panel" style="display: none;">
+            <button id="add-course-btn">Adicionar Novo Curso</button>
+            <h2>Cursos Cadastrados</h2>
+            <div id="admin-course-list" class="card-container"></div>
+        </section>
+    </main>
 
-        <label for="description">Descrição:</label>
-        <textarea id="description" required></textarea>
+    <dialog id="course-modal">
+        <div id="course-modal-content">
+            <h3 id="modal-title">Adicionar Novo Curso</h3>
+            <form id="course-form">
+                <label for="title">Título do Curso:</label>
+                <input type="text" id="title" required>
+                <label for="description">Descrição:</label>
+                <textarea id="description" required></textarea>
+                <label>Imagem do Curso</label>
+                <img id="image-preview" src="" alt="Pré-visualização da imagem" class="hidden">
+                <label for="image-url">URL da Imagem:</label>
+                <input type="text" id="image-url" placeholder="Cole uma URL ou escolha um arquivo abaixo">
+                <p class="image-separator">OU</p>
+                <input type="file" id="image-file" accept="image/*" class="hidden">
+                <button type="button" id="upload-image-btn">Escolher Arquivo do Computador</button>
+                <hr>
+                
+                <h4>Estrutura do Curso</h4>
+                <div id="structure-builder"></div>
+                <button type="button" class="add-item-btn" id="add-module-btn">Adicionar Módulo</button>
+                <hr>
 
-        <label for="image">URL da Imagem:</label>
-        <input type="url" id="image" required>
+                <h4>Quiz Final do Curso</h4>
+                <button type="button" class="edit-quiz-btn" id="edit-final-quiz-btn">Gerenciar Quiz Final</button>
+                <hr>
+                
+                <button type="submit">Salvar Curso</button>
+                <button type="button" id="cancel-edit-btn">Cancelar</button>
+            </form>
+        </div>
+    </dialog>
 
-        <label for="content">Conteúdo do Curso:</label>
-        <textarea id="content" required></textarea>
+    <dialog id="quiz-editor-modal">
+        <h3 id="quiz-editor-title">Editor de Quiz</h3>
+        <div id="quiz-questions-list"></div>
+        <form id="add-question-form">
+            <h4>Adicionar Nova Questão</h4>
+            <div class="input-group">
+                <label for="question-text">Texto da Questão:</label>
+                <input type="text" id="question-text" required>
+            </div>
+            <div class="input-group">
+                <label>Alternativas (marque a correta):</label>
+                <div class="option-group">
+                    <input type="radio" name="correct-answer" value="0" required><input type="text" class="option-input" placeholder="Alternativa 1">
+                </div>
+                <div class="option-group">
+                    <input type="radio" name="correct-answer" value="1"><input type="text" class="option-input" placeholder="Alternativa 2">
+                </div>
+                <div class="option-group">
+                    <input type="radio" name="correct-answer" value="2"><input type="text" class="option-input" placeholder="Alternativa 3">
+                </div>
+                <div class="option-group">
+                    <input type="radio" name="correct-answer" value="3"><input type="text" class="option-input" placeholder="Alternativa 4">
+                </div>
+            </div>
+            <button type="submit">Adicionar Questão</button>
+        </form>
+        <button type="button" id="close-quiz-editor-btn">Fechar Editor de Quiz</button>
+    </dialog>
 
-        <button type="submit">Adicionar Curso</button>
-      </form>
-
-      <h2>Cursos Cadastrados</h2>
-      <div id="admin-course-list" class="card-container"></div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Plataforma de Cursos</p>
-  </footer>
-
-  <script src="admin.js" defer></script>
+    <footer><p>&copy; 2025 Plataforma de Cursos</p></footer>
+    <script src="admin.js" defer></script>
 </body>
 </html>
