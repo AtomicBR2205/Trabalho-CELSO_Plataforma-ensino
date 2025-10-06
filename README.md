@@ -35,7 +35,7 @@ Estilização: Tailwind CSS ou Styled Components
 | Gabriel Luchetta dos Santos | RM561861 |
 | Rafael Felix Souza | RM565855 |
 | Rhariel Marcelo de Oliveira Permanhani | RM566310 |
-| Matheus Henrique Ferreirra Camargo da Silva | RM566232 |
+| Matheus Henrique Ferreira Camargo da Silva | RM566232 |
 | Vinicius Alexandre Aureliano Ribeiro | RM561606 |
 
 ## 🐸💻Colaboradores:
