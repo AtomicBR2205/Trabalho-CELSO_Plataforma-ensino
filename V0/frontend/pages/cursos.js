@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         logoutLink.addEventListener('click', (e) => {
             e.preventDefault();
             sessionStorage.removeItem('loggedInUser');
-            window.location.href = '../../index.html';
+            window.location.href = '../../../index.html';
         });
     }
 

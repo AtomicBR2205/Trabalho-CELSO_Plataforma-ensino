@@ -157,6 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Avisa o usuário e redireciona para a página de login
         alert('Você saiu da sua conta.');
-        window.location.href = '../../index.html';
+        window.location.href = '../../../index.html';
     });
 });
